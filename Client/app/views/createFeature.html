@@ -1,0 +1,51 @@
+<div id="container" style="padding-left:10%">
+<div class="col-md-10">
+<div class="row">
+                    <br />
+<div class="alert alert-info"><h3>Add Feature</h3></div>                 
+<div class="widget-content">
+
+<form role="form" class="form-vertical row-border">
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input type="text" class="form-control" ng-required="required" id="title" ng-model="feature.title">
+  </div>
+  <div class="form-group">
+    <label for="description">Description:</label>
+    <input type="textarea" class="form-control" ng-required="required" id="description" ng-model="feature.description">
+  </div>
+<div class="form-group">
+    <label for="client">Client:</label>
+<select name="client" id="client" ng-model="feature.client">
+  <option value="Client-A">Client A</option>
+  <option value="Client-B">Client B</option>
+  <option value="Client-C">Client C</option>
+</select>  
+</div>
+<div class="form-group">
+    <label for="priority">Client Priority:</label>
+    <input type="number" class="form-control" id="priority" ng-model="feature.priority">
+  </div>
+    <div class="form-group">
+    <label for="date">Target Date:</label>
+    <input type="date" class="form-control" id="date" ng-model="feature.date">
+  </div>
+  <div class="form-group">
+    <label for="url">Ticket Url:</label>
+    <input type="url" class="form-control" id="url" ng-model="feature.url">
+  </div>
+  <div class="form-group">
+    <label for="product">Product Area:</label>
+<select name="product" id="product" ng-model="feature.product">
+  <option value="policies">Policies</option>
+  <option value="billing">Billing</option>
+  <option value="claims">Claims</option>
+  <option value="reports">Reports</option>
+</select>  
+</div>
+  <button type="submit" class="btn btn-default" ng-click="feature.createFeature()">Add Feature</button>
+</form>
+</div>
+</div>
+</div>
+</div>

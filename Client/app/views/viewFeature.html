@@ -1,0 +1,43 @@
+<div id="container" ng-init="viewfeature.getFeatureData()">
+    <div id="content">
+            <div class="col-md-12">
+                <div class="row">
+                    <br />
+                    <div class="alert alert-info"><h3>Added Features</h3></div>                 
+                        <div class="widget-content">
+                            <form class="form-vertical row-border">
+                                <div class="form-group table-responsive">
+                                    <table class="table">
+                                        <thead class="alert alert-info">
+                                            <tr>
+												<td align="center">Serial No</td>
+                                                <td align="center">Title</td>
+                                                <td align="center">Description</td>
+                                                <td align="center">Client</td>
+                                                <td align="center">Priority</td>
+                                                <td align="center">Date</td>
+                                                <td align="center">Ticket Url</td>
+                                                <td align="center">Product Area</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr></tr>
+                                            <tr ng-repeat="feature in viewfeature.FeaturesData">
+                                                <td align="center">{{$index + 1}}</td>
+                                                <td align="center">{{feature.title limitTo: 10 }}</td>
+                                                <td align="center">{{feature.description limitTo: 20 }}</td>
+                                                <td align="center">{{feature.client}}</td>
+												<td align="center">{{feature.priority}}</td>
+												<td align="center">{{feature.date}}</td>
+												<td align="center">{{feature.url}}</td>
+												<td align="center">{{feature.product}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
